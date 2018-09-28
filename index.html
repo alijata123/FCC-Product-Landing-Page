@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product landing page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+    <style>
+        .product-section {
+            float: left;
+            width: 50%;
+            height: 500px;
+            text-align: center;
+
+        }
+
+        .product-section {
+            width: 50%;
+            float: left;
+            height: 500px;
+            text-align: center;
+            font-family: cursive;
+        }
+
+
+        @media (max-width: 600px) {
+            .product-photo {
+                width: 100%;
+                float: left;
+                height: 500px;
+            }
+
+        }
+
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+
+        #header {
+            background-color: darkslateblue;
+            /* padding: 30px; */
+            font-size: 1.1em;
+            margin-bottom: 100px;
+
+            /****/
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            float: right;
+        }
+
+        #header a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            text-decoration: none;
+            /* font-size: 17px; */
+            padding: 20px;
+        }
+
+        #header a:hover {
+            background: #bb5454;
+            color: white;
+        }
+        
+        
+        
+
+        a {
+            color: whitesmoke;
+            margin-right: 5px;
+        }
+
+        a:hover {
+            color: #fce20b;
+        }
+
+        /* Create three equal columns that floats next to each other */
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 20px;
+            height: 250px;
+            color: white;
+            text-align: center;
+        }
+
+
+
+        #subscribe-form {
+            text-align: center;
+            margin-bottom: 100px;
+            padding-top: 200px;
+        }
+
+        @media (max-width: 600px) {
+            .product {
+                float: left;
+                width: 100%;
+                height: 300px;
+                margin-top: 100px;
+            }
+        }
+
+
+        .main:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .main {
+            margin-top: 200px;
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+
+        .footer {
+            background-color: #0c5f78;
+            padding: 10px;
+            text-align: center;
+            margin-top: 200px;
+            border-radius: 10px;
+            color: white;
+            font-weight: 700;
+        }
+
+
+        @media (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .product-section {
+                width: 100%;
+
+            }
+        }
+
+        #description,
+        h1,
+        p {
+            padding: 10px;
+        }
+
+        #nav-bar {
+            padding-top: 25px;
+        }
+
+
+        #header-img {
+            float: left;
+            width: 400px;
+            height: 74px;
+        }
+
+        #video {
+            margin-top: 200px;
+            text-align: center;
+        }
+
+        @media(max-width: 350px) {
+            #header-img {
+                float: left;
+                width: 299px;
+                height: 75px;
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="index.html"><img src="img/LogoMakr_2BZTga.png" id="header-img" ></a>
+        <nav id="nav-bar">
+            <a href="#subscribe-form" class="nav-link">Subscribe</a>
+            <a href="#description" class="nav-link">About</a>
+            <a href="#footer" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="product-section">
+            <img src="img/40117-15487.jpg" height="500px" width="100%">
+        </div>
+
+        <div class="product-section">
+            <h1>Tikkurila Paint</h1>
+            <h2>Ultra Special</h2>
+            <ul><b>TYPE</b><br> Acrylic paint that repels dirt. Easy to clean, if necessary.</ul>
+            <ul><b>SUITABILITY</b><br> Surface finishing of untreated, industrially primed or previously wood surfaces with external wood or treated wood preservatives.</ul>
+            <ul><b>APPLICATIONS</b><br> Corner and perpendicular boards, poles and railings.</ul>
+
+            <form id="form">
+                <fieldset>
+                    <legend>Order Now</legend>
+                    <br>
+                    <label for="eyes">How much litre?</label>
+                    <input type="number" id="eyes" name="eyes" placeholder="Litre" min="2.7" max="1000" />
+                    <span class="validity"></span>
+                    <br>
+                    <br>
+                    <button name="submit" type="submit" value="submit-true">Order</button>
+                </fieldset>
+            </form>
+
+        </div>
+    </div>
+
+    <section id="video">
+        <video width="100%" controls>
+                <source src="https://res.cloudinary.com/daw8ypvk3/video/upload/v1538159742/How_to_paint_a_wooden_house_-_Tikkurila_q469gi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    </section>
+
+
+    <div class="row" id="subscribe-form">
+        <form method="post" action="https://www.freecodecamp.com/email-submit">
+            <h1 style="color: firebrick">Subscribe for tracking our product evolution!</h1>
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+    <div class="row" id="description">
+        <div class="column" style="background-image: url(img/Ultra_Primer_tehdaspohjamaalatulle_ulkolaudoitukselle_1.jpeg); background-repeat: no-repeat;">
+            <h1 style="background: rgba(109, 109, 109, 0.5);">Blossom effect</h1>
+            <p style=" background:  rgba(0, 5, 125, 0.5);">Ultra Special is a special paint for corners and rafters, rails and columns.</p>
+        </div>
+        <div class="column" style="background-image: url(img/tikkurila_house_ultraspecial_painting.jpeg); background-repeat: no-repeat;">
+
+            <h1 style="background: rgba(109, 109, 109, 0.5);">Easy to paint</h1>
+            <p style="background:  rgba(0, 5, 125, 0.5);">Ultra Special is thick and well-covered. This makes it easier to paint complex, upside-down surfaces.</p>
+        </div>
+        <div class="column" style="background-image: url(img/house-value-coins.jpg); background-repeat: no-repeat; ">
+            <h1 style="background: rgba(109, 109, 109, 0.5);">Affordable Price</h1>
+            <p style="background:  rgba(0, 5, 125, 0.5);">Our paints stands for quality and affodable prices! When it comes to customer choice, we are the ones.</p>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        <p><span>Address:</span> Bulevardi, 00120 Helsinki, Finlande</p>
+        <p>Phone Number: +35840900900</p>
+        <p>Designed By: <a href="https://www.ali-jata.me/" target="_blank">www.ali-jata.me</a></p>
+    </div>
+
+
+
+</body>
+
+</html>
